@@ -2,6 +2,14 @@
 
 [![Skeleton Screens Concept example screenshot](fixtures/example.png)](https://dimitrinicolas.github.io/skeleton-screens-concept)
 
+I present to you a concept of implementation of Skeleton Screens in web Single Page
+Applications. Before thinking about using this concept in your project, make
+sure to read the [Known issues](#known-issues) part.
+
+The main benefit is to provide a great user experience on first page load and to
+decrease the First Contentful Paint time that has a role to play in Google's
+website evaluation, you can learn more in [Benefits](#benefits) part
+
 ## [Example](https://dimitrinicolas.github.io/skeleton-screens-concept)
 
 An example is available at the following address:
@@ -156,6 +164,23 @@ have CSS transitions and the time to wait before adding the class name to the
 `html` element depends on the user device computation performance. The 100
 milliseconds value is the maximum average time the browser will need to compute
 the style sheet.
+
+## Benefits
+
+I did five [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) tests on each version of the same example page: [the
+standard one without skeleton screens and with render-blocking CSS](https://dimitrinicolas.github.io/skeleton-screens-concept/index-without-skeleton-screens.html) and [the version with this concept](https://dimitrinicolas.github.io/skeleton-screens-concept).
+
+The Mobile score and First Contentful Paint time was always the same after each
+test. The version with skeleton screens got a 99% mobile score with 0,8 seconds
+for the First Contentful Paint. The standard version got a 97% mobile score with
+2,2 seconds for the First Contentful Paint.
+
+These results are not the best example because the example page has a super
+simple DOM and the 300 kb style sheet only contains a small amount of CSS to
+compute, the whole file size come from a random string in a CSS comment.
+
+I'll need to implement this concept into a real website to better understand the
+performance benefit.
 
 ## Use Case
 
