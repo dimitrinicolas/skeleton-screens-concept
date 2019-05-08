@@ -16,7 +16,7 @@ An example is available at the following address:
 [dimitrinicolas.github.io/skeleton-screens-concept](https://dimitrinicolas.github.io/skeleton-screens-concept).
 
 I made sure that the style sheet weighs at least 300 kb for the example by
-adding random strings inside. You can use your browser developper tools to
+adding random strings inside. You can use your browser developer tools to
 simulate a slow internet connection.
 
 The source code is available in this repository: [index.html](index.html).
@@ -126,8 +126,8 @@ a `transition` CSS property will get triggered on style sheet load if its
 animated properties values are different from the default or from the
 pre-loader style.
 
-To prevent this problem to trigger transition on every properties of our element
-we can target properties to animate using the `transition-duration` and
+To prevent this problem to trigger transition on every property of the element,
+we can target the properties to animate using the `transition-duration` and
 `transition-property` CSS properties. You can learn more about theses on Mozilla
 Web documentation:
 [developer.mozilla.org/fr/docs/Web/CSS/transition-property](https://developer.mozilla.org/fr/docs/Web/CSS/transition-property).
@@ -170,7 +170,7 @@ the style sheet.
 I did five [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) tests on each version of the same example page: [the
 standard one without skeleton screens and with render-blocking CSS](https://dimitrinicolas.github.io/skeleton-screens-concept/index-without-skeleton-screens.html) and [the version with this concept](https://dimitrinicolas.github.io/skeleton-screens-concept).
 
-The Mobile score and First Contentful Paint time was always the same after each
+The Mobile score and First Contentful Paint time were always the same after each
 test. The version with skeleton screens got a 99% mobile score with 0,8 seconds
 for the First Contentful Paint. The standard version got a 97% mobile score with
 2,2 seconds for the First Contentful Paint.
@@ -184,7 +184,7 @@ performance benefit.
 
 ## Use Case
 
-This approach of skeleton screens is usefull for Single Page Applications with a
+This approach of skeleton screens is useful for Single Page Applications with a
 heavy style sheet.
 
 ## Frameworks implementation
