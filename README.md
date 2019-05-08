@@ -7,7 +7,7 @@
 An example is available at the following address:
 [dimitrinicolas.github.io/skeleton-screens-concept](https://dimitrinicolas.github.io/skeleton-screens-concept).
 
-I made sure that the style sheet weighs at least 100 kb for the example by
+I made sure that the style sheet weighs at least 300 kb for the example by
 adding random strings inside. You can use your browser developper tools to
 simulate a slow internet connection.
 
