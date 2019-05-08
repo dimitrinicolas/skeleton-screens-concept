@@ -4,11 +4,11 @@
 
 I present to you a concept of implementation of Skeleton Screens in web Single Page
 Applications. Before thinking about using this concept in your project, make
-sure to read the [Known issues](#known-issues) part.
+sure to read the [Known issues](#known-issues) section.
 
 The main benefit is to provide a great user experience on first page load and to
 decrease the First Contentful Paint time that has a role to play in Google's
-website evaluation, you can learn more in [Benefits](#benefits) part
+website evaluation, you can learn more in [Benefits](#benefits) section
 
 ## [Example](https://dimitrinicolas.github.io/skeleton-screens-concept)
 
@@ -191,6 +191,10 @@ heavy style sheet.
 
 I need to find solutions to use this concept with static website frameworks like
 [Gatsby](https://github.com/gatsbyjs/gatsby) or [Next.js](https://github.com/zeit/next.js/).
+
+## Related
+
+- [Everything you need to know about skeleton screens (uxdesign.cc)](https://uxdesign.cc/what-you-should-know-about-skeleton-screens-a820c45a571a) - An article by [Bill Chung](http://billat.work/) about differents skeleton screens design solutions and studies of their performances on the user perception.
 
 ## License
 
