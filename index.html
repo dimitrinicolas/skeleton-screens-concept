@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skeleton Screens Concept</title>
+  <style>
+    html {
+      background-color: #c7c7c7;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: white;
+    }
+
+    .header {
+      height: 80px;
+      background-color: white;
+    }
+
+    .header__wrap {
+      position: relative;
+      height: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .header__logo,
+    .header__nav {
+      display: none;
+    }
+
+    @keyframes sweep {
+      to {
+        background-position: calc(100% + 80px) 0;
+      }
+    }
+
+    .header__wrap::before,
+    .header__wrap::after {
+      content: "";
+      position: absolute;
+      background-color: #c7c7c7;
+      background-image:
+        linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+
+      background-repeat: no-repeat;
+      background-size: 80px 100%;
+      background-position: -80px 0;
+
+      animation: sweep 1000ms ease-in-out 0s infinite;
+    }
+
+    .header__wrap::before {
+      top: 16px;
+      left: 0;
+      bottom: 16px;
+      width: 100px;
+    }
+
+    .header__wrap::after {
+      top: 28px;
+      right: 0;
+      bottom: 28px;
+      width: 500px;
+      animation-delay: 300ms;
+    }
+
+    .intro {
+      height: 200px;
+      background-color: #c7c7c7;
+    }
+
+    .intro__wrap {
+      display: none;
+    }
+
+    .main {
+      height: 100px;
+      background-color: white;
+    }
+
+    .main__wrap {
+      display: none;
+    }
+
+    .footer {
+      display: none;
+    }
+  </style>
+
+  <link rel="preload" href="style.css" as="style" onload="this.rel = 'stylesheet';">
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrap">
+      <div class="header__logo">
+        <img src="assets/logo.png" alt="Logo">
+      </div>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="https://github.com/dimitrinicolas/skeleton-screens-concept">Github repository</a></li>
+          <li><a href="#">Link #2</a></li>
+          <li><a href="#">Link #3</a></li>
+          <li><a href="#">Link #4</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="intro__wrap">
+      <div>Intro with known height</div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="main__wrap">
+      Content with unknown height
+    </div>
+  </main>
+
+  <footer class="footer">
+    Footer
+  </footer>
+</body>
+
+</html>

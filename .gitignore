@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log*
+npm-debug.log*
+
+# Coverage directory
+coverage
+
+# nyc test coverage
+.nyc_output
+
+# TS Dist directory
+dist
+
+# Dependency directories
+node_modules/
+
+# npm cache directory
+.npm
+
+# Eslint cache
+.eslintcache
+
+# Temporary files
+tmp
+
+# Mac files
+.DS_Store
+
+# SSL Certificate
+cert.pem
+key.pem
+
+# ORM config
+ormconfig.json
+
+# Next build
+.next
+out/
+
+# Environnement variables
+.env
+.env.development
+.env.staging
+.env.production
