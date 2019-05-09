@@ -24,13 +24,16 @@ The source code is available in this repository: [index.html](index.html).
 ## Concept
 
 First, we load the application style sheet as a non-blocking resource using the
-following pattern in the HTML `head` tag:
+following pattern in the HTML `head` element:
 
 ```html
-<link rel="preload" href="style.css" as="style" onload="this.rel = 'stylesheet';">
-<noscript>
-  <link rel="stylesheet" href="style.css">
-</noscript>
+<link rel="preload" href="style.css" as="style">
+```
+
+And add the stylesheet at the end of your `body` element:
+
+```html
+<link rel="stylesheet" href="style.css">
 ```
 
 Then, we add some CSS inside a `style` tag just before the non-blocking style
@@ -64,10 +67,7 @@ sheet loading:
   </style>
 
   <!-- Non-blocking style sheet loading -->
-  <link rel="preload" href="style.css" as="style" onload="this.rel = 'stylesheet';">
-  <noscript>
-    <link rel="stylesheet" href="style.css">
-  </noscript>
+  <link rel="preload" href="style.css" as="style">
 </head>
 ```
 
@@ -137,18 +137,14 @@ To totally prevent this issue we'll need to add a specific class name to the
 and use the `transition` property in our style only when this class name has
 been added:
 
-In `head` tag:
+At the end of the `body` element:
 
 ```html
 <link
- rel="preload"
+ rel="stylesheet"
  href="style.css"
- as="style"
- onload="this.rel = 'stylesheet'; setTimeout(function () { document.documentElement.className += ' js-can-use-transitions';}, 100);"
+ onload="setTimeout(function () { document.documentElement.className += ' js-can-use-transitions';}, 100);"
 >
-<noscript>
-  <link rel="stylesheet" href="style.css">
-</noscript>
 ```
 
 In `style.css`:
